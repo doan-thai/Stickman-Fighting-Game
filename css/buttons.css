@@ -1,0 +1,61 @@
+.btn-row { display: flex; gap: 10px; margin-bottom: 10px; }
+
+button {
+  padding: 7px 22px;
+  font-family: 'Black Ops One', cursive;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  border: 1px solid #4af;
+  background: transparent;
+  color: #4af;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+button:hover { background: #4af; color: #000; }
+button.active { background: #4af; color: #000; }
+
+.mini-btn {
+  height: 54px;
+  min-width: 130px;
+  padding: 0 14px;
+  font-size: 1rem;
+}
+
+#sound-on,
+#sound-off {
+  min-width: 0;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  padding: 0 8px;
+}
+
+#lang-vi,
+#lang-en {
+  min-width: 0;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+  padding: 0 6px;
+}
+
+#btn1,
+#btn2 {
+  min-width: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.82rem;
+  letter-spacing: 0.4px;
+  padding: 0 8px;
+}
+
+@media (max-width: 760px) {
+  #btn1,
+  #btn2 { min-width: 0; font-size: 0.72rem; letter-spacing: 0.2px; }
+}

@@ -1,0 +1,74 @@
+.about-panel {
+  width: min(960px, 95vw);
+  border: 1px solid #28497a;
+  background: linear-gradient(180deg, rgba(9, 16, 36, 0.97), rgba(3, 7, 18, 0.99));
+  box-shadow: 0 0 36px rgba(12, 74, 160, 0.22), inset 0 0 0 1px rgba(140, 190, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px 24px 22px;
+  text-align: left;
+}
+
+.about-title {
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  color: #96ddff;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.about-desc {
+  text-align: center;
+  color: #d5eaff;
+  opacity: 0.95;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.guide-card {
+  border: 1px solid rgba(90, 154, 220, 0.4);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(8, 23, 52, 0.55);
+}
+
+.guide-card h3 {
+  color: #8fd7ff;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.guide-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #e2f2ff;
+  opacity: 0.92;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.about-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+#btn-about-back {
+  min-width: 220px;
+  height: 54px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 760px) {
+  .about-panel { padding: 18px 14px; }
+  .guide-grid { grid-template-columns: 1fr; }
+  #btn-about-back { min-width: min(350px, 74vw); }
+}

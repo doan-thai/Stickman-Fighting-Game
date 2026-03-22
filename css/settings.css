@@ -1,0 +1,173 @@
+.settings-panel {
+  width: min(800px, 95vw);
+  margin-bottom: 12px;
+  border: 1px solid #28497a;
+  background: linear-gradient(180deg, rgba(10, 19, 42, 0.96), rgba(4, 9, 20, 0.98));
+  box-shadow: 0 0 36px rgba(14, 81, 170, 0.22), inset 0 0 0 1px rgba(140, 190, 255, 0.08);
+  border-radius: 14px;
+  padding: 26px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settings-title {
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+  color: #8fd7ff;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(143, 215, 255, 0.25);
+  padding-bottom: 12px;
+  width: min(360px, 82%);
+}
+
+.settings-grid {
+  width: min(840px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.settings-row-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.settings-row-single {
+  display: flex;
+  justify-content: center;
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.settings-row-single .setting-row { width: 100%; }
+
+.mode-row {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.mode-row .setting-label { display: none; }
+
+.mode-row .setting-controls {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  justify-self: center;
+}
+
+.setting-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.setting-label {
+  text-align: left;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.setting-controls {
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 54px;
+}
+
+.sound-controls { grid-template-columns: minmax(84px, 1fr) minmax(84px, 1fr) 64px; }
+.health-controls { grid-template-columns: minmax(0, 1fr) 102px; }
+.time-controls { grid-template-columns: 1fr; }
+.mode-controls { grid-template-columns: repeat(2, minmax(220px, 1fr)); justify-self: center; }
+.lang-controls { grid-template-columns: 1fr 1fr; }
+
+#health-slider { width: 100%; }
+
+.value-pill {
+  min-width: 92px;
+  text-align: center;
+  border: 1px solid #33557a;
+  padding: 9px 8px;
+  border-radius: 4px;
+  color: #8fd7ff;
+  font-size: 1.05rem;
+}
+
+.sound-indicator {
+  min-width: 0;
+  width: 64px;
+  font-size: 1.35rem;
+  line-height: 1;
+  padding: 10px 8px;
+}
+
+.sound-indicator.muted { opacity: 0.45; }
+
+#time-limit {
+  width: 100%;
+  height: 54px;
+  background: #0e1628;
+  color: #d6ecff;
+  border: 1px solid #33557a;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.settings-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+  width: min(620px, 100%);
+  margin-left: 0;
+  margin-right: 0;
+  margin-inline: auto;
+}
+
+#btn-start,
+#btn-about {
+  width: 100%;
+  min-width: 0;
+  height: 56px;
+  font-size: 1.2rem;
+}
+
+.settings-note {
+  min-height: 18px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #ffdc8a;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .settings-title { font-size: 1.25rem; letter-spacing: 3px; width: min(290px, 90%); }
+  .settings-grid { width: min(540px, 100%); }
+  .settings-row-pair { grid-template-columns: 1fr; gap: 10px; }
+  .setting-row { grid-template-columns: 1fr; gap: 8px; margin-bottom: 10px; }
+  .setting-label { text-align: center; font-size: 0.96rem; }
+  .setting-controls { display: flex; justify-content: center; width: 100%; min-height: auto; flex-wrap: wrap; }
+  #health-slider { width: min(350px, 74vw); }
+  .value-pill { min-width: 88px; }
+  #time-limit { width: min(350px, 74vw); }
+  .mode-row .setting-controls { width: min(350px, 74vw); }
+  .mode-controls { display: grid !important; grid-template-columns: 1fr 1fr; width: min(350px, 74vw); }
+  #btn-start,
+  #btn-about { min-width: min(350px, 74vw); }
+  .settings-actions { width: min(350px, 74vw); margin-left: 0; grid-template-columns: 1fr; }
+}
