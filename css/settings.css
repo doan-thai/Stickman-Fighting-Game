@@ -1,11 +1,11 @@
 .settings-panel {
-  width: min(1400px, 96vw, calc(92vh * 1.68));
+  width: min(1200px, 95vw);
   margin-bottom: 12px;
   border: 1px solid #28497a;
   background: linear-gradient(180deg, rgba(10, 19, 42, 0.96), rgba(4, 9, 20, 0.98));
   box-shadow: 0 0 36px rgba(14, 81, 170, 0.22), inset 0 0 0 1px rgba(140, 190, 255, 0.08);
   border-radius: 14px;
-  padding: clamp(26px, 4vh, 42px) clamp(20px, 2.7vw, 36px) clamp(22px, 3.3vh, 36px);
+  padding: 26px 20px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,12 +13,12 @@
 
 .settings-title {
   font-family: 'Black Ops One', cursive;
-  font-size: clamp(1.6rem, 3.2vh, 2.2rem);
-  letter-spacing: clamp(3px, 0.38vw, 6px);
+  font-size: 1.6rem;
+  letter-spacing: 4px;
   color: #8fd7ff;
-  margin-bottom: clamp(18px, 2.4vh, 28px);
+  margin-bottom: 18px;
   border-bottom: 1px solid rgba(143, 215, 255, 0.25);
-  padding-bottom: clamp(12px, 1.7vh, 18px);
+  padding-bottom: 12px;
   width: min(520px, 82%);
 }
 
@@ -26,13 +26,13 @@
   width: min(1120px, 100%);
   display: flex;
   flex-direction: column;
-  gap: clamp(14px, 2vh, 24px);
+  gap: 14px;
 }
 
 .settings-row-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(20px, 2.3vw, 34px);
+  gap: 24px;
   width: min(980px, 100%);
   margin: 0 auto;
 }
@@ -66,15 +66,15 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: clamp(6px, 1vh, 12px);
+  gap: 6px;
   margin-bottom: 0;
   width: 100%;
 }
 
 .setting-label {
   text-align: left;
-  font-size: clamp(0.78rem, 1.35vh, 1rem);
-  letter-spacing: clamp(1.5px, 0.2vw, 3px);
+  font-size: 0.78rem;
+  letter-spacing: 2px;
   opacity: 0.6;
   text-transform: uppercase;
 }
@@ -82,9 +82,9 @@
 .setting-controls {
   display: grid;
   align-items: center;
-  gap: clamp(10px, 1.2vw, 16px);
+  gap: 10px;
   width: 100%;
-  min-height: clamp(54px, 7vh, 74px);
+  min-height: 54px;
 }
 
 .sound-controls { grid-template-columns: minmax(84px, 1fr) minmax(84px, 1fr) 64px; }
@@ -99,10 +99,10 @@
   min-width: 92px;
   text-align: center;
   border: 1px solid #33557a;
-  padding: clamp(9px, 1.2vh, 14px) 8px;
+  padding: 9px 8px;
   border-radius: 4px;
   color: #8fd7ff;
-  font-size: clamp(1rem, 1.9vh, 1.2rem);
+  font-size: 1.05rem;
 }
 
 .sound-indicator {
@@ -117,21 +117,21 @@
 
 #time-limit {
   width: 100%;
-  height: clamp(54px, 7vh, 72px);
+  height: 54px;
   background: #0e1628;
   color: #d6ecff;
   border: 1px solid #33557a;
   padding: 6px 12px;
   border-radius: 4px;
-  font-size: clamp(1.02rem, 1.9vh, 1.24rem);
+  font-size: 1.05rem;
   font-family: 'Share Tech Mono', monospace;
 }
 
 .settings-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(10px, 1.2vw, 16px);
-  margin-top: clamp(16px, 2.1vh, 24px);
+  gap: 10px;
+  margin-top: 16px;
   width: min(980px, 100%);
   margin-left: 0;
   margin-right: 0;
@@ -142,20 +142,35 @@
 #btn-about {
   width: 100%;
   min-width: 0;
-  height: clamp(56px, 7.4vh, 76px);
-  font-size: clamp(1.2rem, 2.4vh, 1.55rem);
+  height: 56px;
+  font-size: 1.2rem;
 }
 
 .settings-note {
   min-height: 18px;
-  margin-top: clamp(12px, 1.8vh, 20px);
-  font-size: clamp(0.9rem, 1.5vh, 1.05rem);
+  margin-top: 12px;
+  font-size: 0.9rem;
   color: #ffdc8a;
   letter-spacing: 1.2px;
   text-align: center;
 }
 
-.settings-panel .mini-btn { height: clamp(54px, 7vh, 72px); }
+@media (min-width: 1100px) {
+  .settings-panel { padding: 40px 34px 36px; }
+  .settings-title { font-size: 2rem; letter-spacing: 5px; margin-bottom: 24px; }
+  .settings-grid { gap: 20px; }
+  .settings-row-pair { gap: 30px; }
+  .setting-row { gap: 10px; }
+  .setting-label { font-size: 0.92rem; }
+  .setting-controls { min-height: 68px; gap: 14px; }
+  .settings-panel .mini-btn { height: 64px; font-size: 1.02rem; }
+  #time-limit { height: 64px; font-size: 1.2rem; }
+  .value-pill { padding: 12px 10px; font-size: 1.12rem; }
+  .settings-actions { margin-top: 20px; }
+  #btn-start,
+  #btn-about { height: 68px; font-size: 1.4rem; }
+  .settings-note { margin-top: 18px; font-size: 1rem; }
+}
 
 @media (max-width: 760px) {
   .settings-title { font-size: 1.25rem; letter-spacing: 3px; width: min(290px, 90%); }
