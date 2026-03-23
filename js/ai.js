@@ -11,6 +11,7 @@ function createAI() {
 function updateAI() {
   const a = ai
   const dist = Math.abs(p1.x - p2.x)
+  p2.dir = p2.x < p1.x ? 1 : -1
   if (p1.attack === 1) a.memory.lastPunch = 0
   if (p1.attack === 2) a.memory.lastKick = 0
   a.memory.lastPunch++
@@ -36,6 +37,13 @@ function updateAI() {
   } else if (p1.attack === 0) {
     p2.block = false
   }
+
+  if (p2.specialCooldown === 0 && p2.cooldown === 0 && !p2.block && Math.random() < 0.03) {
+    launchEnergyShot(p2, p1)
+    a.reactionDelay = 18 + Math.random() * 10 | 0
+    return
+  }
+
   switch (a.state) {
     case "approach":
       p2.block = false

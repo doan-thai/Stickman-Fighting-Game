@@ -2,8 +2,8 @@ const GROUND = 330
 const BASE_HP = 200
 
 const GAME_KEYS = new Set([
-  "KeyA", "KeyD", "KeyW", "KeyU", "KeyI", "KeyO",
-  "ArrowLeft", "ArrowRight", "ArrowUp", "Numpad4", "Numpad5", "Numpad6", "Space"
+  "KeyA", "KeyD", "KeyW", "KeyU", "KeyI", "KeyO", "KeyL",
+  "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Numpad3", "Numpad4", "Numpad5", "Numpad6", "Space"
 ])
 
 const i18n = {
@@ -36,16 +36,16 @@ const i18n = {
     guide1Line3: "- Nếu hai bên bằng máu khi hết giờ, kết quả là hòa.",
     guide2Title: "Điều khiển người chơi 1",
     guide2Line1: "- A / D: Di chuyển trái phải.",
-    guide2Line2: "- W: Nhảy lên.",
-    guide2Line3: "- U: Đỡ đòn, I: Đấm, O: Đá.",
+    guide2Line2: "- W: Nhảy. Hướng mặt theo phím di chuyển (A trái, D phải).",
+    guide2Line3: "- U: Đỡ, I: Đấm, O: Đá, U + I : Energy-shot, L: Tốc biến.",
     guide3Title: "Điều khiển người chơi 2",
     guide3Line1: "- Mũi tên trái / phải: Di chuyển.",
-    guide3Line2: "- Mũi tên lên: Nhảy.",
-    guide3Line3: "- Num4: Đỡ, Num5: Đấm, Num6: Đá.",
+    guide3Line2: "- Mũi tên lên: Nhảy. Hướng mặt theo phím di chuyển trái/phải.",
+    guide3Line3: "- Num4: Đỡ, Num5: Đấm, Num6: Đá, Num4 + Num5 : Energy-shot, Num3: Tốc biến.",
     guide4Title: "Mẹo chơi nhanh",
     guide4Line1: "- Đỡ đòn sẽ giảm sát thương nhận vào.",
-    guide4Line2: "- Đấm để mở combo, đá để đẩy lùi đối thủ.",
-    guide4Line3: "- Chỉnh Health và Time trong thiết lập trận đấu để phù hợp."
+    guide4Line2: "- Kick gây 10 damage; combo 5 hit không bị đỡ mới gây knockdown.",
+    guide4Line3: "- Energy-shot gây 14 damage và có hồi chiêu 3 giây."
   },
   en: {
     title: "STICKMAN FIGHTING",
@@ -76,15 +76,15 @@ const i18n = {
     guide1Line3: "- If HP is equal when time ends, the match is a DRAW.",
     guide2Title: "PLAYER 1 CONTROLS",
     guide2Line1: "- A / D: Move left and right.",
-    guide2Line2: "- W: Jump.",
-    guide2Line3: "- U: Block, I: Punch, O: Kick.",
+    guide2Line2: "- W: Jump. Facing follows move input (A left, D right).",
+    guide2Line3: "- U: Block, I: Punch, O: Kick, U + I : Energy-shot, L: Blink.",
     guide3Title: "PLAYER 2 CONTROLS",
     guide3Line1: "- Left / Right Arrow: Move.",
-    guide3Line2: "- Up Arrow: Jump.",
-    guide3Line3: "- Num4: Block, Num5: Punch, Num6: Kick.",
+    guide3Line2: "- Up Arrow: Jump. Facing follows left/right movement input.",
+    guide3Line3: "- Num4: Block, Num5: Punch, Num6: Kick, Num4 + Num5 : Energy-shot, Num3: Blink.",
     guide4Title: "QUICK TIPS",
     guide4Line1: "- Blocking reduces incoming damage.",
-    guide4Line2: "- Punch to start combos, kick to push back.",
-    guide4Line3: "- Tune Health and Time in BATTLE SETUP to match your style."
+    guide4Line2: "- Kick deals 10 damage; target is knocked down after 5 clean combo hits.",
+    guide4Line3: "- Energy-shot deals 14 damage and has a 3-second cooldown."
   }
 }

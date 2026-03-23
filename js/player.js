@@ -7,6 +7,12 @@ function createPlayer(x, col) {
     hit: 0, hitCount: 0, hitTimer: 0,
     knockdown: 0,
     knee: 0, kneeMax: 0,
+    specialCooldown: 0,
+    specialQueued: false,
+    specialSeqStep: 0,
+    specialSeqAt: 0,
+    blinkCooldown: 0,
+    blinkQueued: false,
     dir: 1, walk: 0,
     color: col
   }

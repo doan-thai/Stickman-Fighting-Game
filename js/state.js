@@ -21,6 +21,9 @@ let score = { p1: 0, p2: 0 }
 let p1
 let p2
 let ai
+let projectiles = []
+let hitEffects = []
+let blinkEffects = []
 let gameOverWinner = ""
 let gameOverTimer = 0
 let lastTime = performance.now()

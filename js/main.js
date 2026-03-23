@@ -1,5 +1,6 @@
 document.addEventListener("keydown", e => {
   keys[e.code] = true
+  if (typeof registerInput === "function") registerInput(e.code)
   if (GAME_KEYS.has(e.code)) e.preventDefault()
 }, { passive: false })
 
@@ -95,7 +96,11 @@ function initSettingsUI() {
 function resetGame() {
   p1 = createPlayer(200, "#4af")
   p2 = createPlayer(700, "#f64")
+  p2.dir = -1
   ai = createAI()
+  projectiles = []
+  hitEffects = []
+  blinkEffects = []
   gameOver = false
   gameOverWinner = ""
   gameOverTimer = 0

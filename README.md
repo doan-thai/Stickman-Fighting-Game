@@ -45,6 +45,8 @@ stickman-fighting/
 - `U`: Đỡ đòn
 - `I`: Đấm
 - `O`: Đá
+- `U + I`: cầu năng lượng (hồi chiêu 3 giây)
+- `L`: tốc biến (hồi chiêu 1.5 giây)
 
 ### Người chơi 2
 
@@ -53,6 +55,15 @@ stickman-fighting/
 - `Numpad4`: Đỡ đòn
 - `Numpad5`: Đấm
 - `Numpad6`: Đá
+- `Numpad4 + Numpad5`: cầu năng lượng (hồi chiêu 3 giây)
+- `Numpad3`: tốc biến (hồi chiêu 1.5 giây)
+
+## Sát thương đòn đánh
+
+- Đấm gây `7` sát thương
+- Kick gây `10` sát thương và gây hiệu ứng khựng
+- Cầu năng lượng gây `14` sát thương
+- Knockdown khi dính đủ `5` hit liên tiếp và không bị block.
 
 ## Chạy local
 
@@ -61,15 +72,6 @@ Không cần cài dependency.
 1. Mở thư mục project trong VS Code.
 2. Mở file `index.html` bằng browser (hoặc dùng Live Server).
 
-## Deploy GitHub Pages
+## Deploy
 
-Sau khi đã push code lên GitHub:
-
-1. Vào repository trên GitHub.
-2. Mở `Settings` -> `Pages`.
-3. Tại `Build and deployment`, chọn:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/(root)`
-4. Nhấn `Save`.
-5. Đợi 1-2 phút, GitHub sẽ cung cấp link công khai.
+Dùng netlify.app
